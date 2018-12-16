@@ -20,7 +20,27 @@ module.exports = {
         name: 'assets',
       },
     },
-    'gatsby-transformer-remark',
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 500,
+            },
+          },
+          {
+            resolve: 'gatsby-remark-external-links',
+            options: {
+              target: '_blank',
+              rel: 'nofollow noopener noreferrer',
+            },
+          },
+          `gatsby-remark-responsive-iframe`,
+        ],
+      },
+    },
     'gatsby-plugin-typescript',
     'gatsby-plugin-react-helmet',
     {
