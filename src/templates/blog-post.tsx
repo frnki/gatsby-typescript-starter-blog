@@ -1,25 +1,45 @@
-import React from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql, Link } from "gatsby"
+import * as React from "react"
+import Layout from "../components/layout"
+import SEO from "../components/seo"
 
-// import Bio from '../components/bio'
-import Layout from '../components/layout'
-import SEO from '../components/seo'
+interface BlogPostTemplateProps {
+  data: {
+    site: {
+      siteMetadata: {
+        title: string
+      }
+    }
+    markdownRemark: {
+      id: string
+      excerpt: string
+      html: string
+      frontmatter: {
+        title: string
+        date: string
+      }
+    }
+  }
+  pageContext: {
+    previous: any
+    next: any
+  }
+}
 
-class BlogPostTemplate extends React.Component {
+class BlogPostTemplate extends React.Component<BlogPostTemplateProps, {}> {
   render() {
     const post = this.props.data.markdownRemark
-    const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <Layout>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
         <h1>{post.frontmatter.title}</h1>
         <p
           style={{
-            display: 'block',
-            marginBottom: '1rem',
-            marginTop: '-rem',
+            display: "block",
+            marginBottom: "1rem",
+            marginTop: "-rem",
           }}
         >
           {post.frontmatter.date}
@@ -27,17 +47,15 @@ class BlogPostTemplate extends React.Component {
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
           style={{
-            marginBottom: '14px',
+            marginBottom: "14px",
           }}
         />
-        {/* <Bio /> */}
-
         <ul
           style={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            justifyContent: 'space-between',
-            listStyle: 'none',
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "space-between",
+            listStyle: "none",
             padding: 0,
           }}
         >

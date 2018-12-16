@@ -1,20 +1,47 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import { graphql, Link } from "gatsby"
+import * as React from "react"
+import Image from "../components/image"
+import Layout from "../components/layout"
+import SEO from "../components/seo"
 
-import Layout from '../components/layout'
-import Image from '../components/image'
-import SEO from '../components/seo'
+interface PostNode {
+  node: {
+    excerpt: string
+    frontmatter: {
+      date: string
+      title: string
+    }
+    fields: {
+      slug: string
+    }
+  }
+}
 
-class IndexPage extends React.Component {
+interface IndexPageProps {
+  data: {
+    site: {
+      siteMetadata: {
+        siteName: string
+      }
+    }
+    allMarkdownRemark: {
+      edges: PostNode[]
+    }
+  }
+}
+
+class IndexPage extends React.Component<IndexPageProps, {}> {
   render() {
     const { data } = this.props
-    const siteTitle = data.site.siteMetadata.title
     const posts = data.allMarkdownRemark.edges
 
     return (
       <Layout>
-        <SEO title="All posts" keywords={['blog', 'gatsby', 'javascript', 'react']} />
-        <div style={{ maxWidth: '300px', marginBottom: '1.45rem' }}>
+        <SEO
+          title="All posts"
+          keywords={["blog", "gatsby", "javascript", "react"]}
+        />
+        <div style={{ maxWidth: "300px", marginBottom: "1.45rem" }}>
           <Image />
         </div>
         {posts.map(({ node }) => {
@@ -23,10 +50,10 @@ class IndexPage extends React.Component {
             <div key={node.fields.slug}>
               <h3
                 style={{
-                  marginBottom: '0.25rem',
+                  marginBottom: "0.25rem",
                 }}
               >
-                <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
+                <Link style={{ boxShadow: "none" }} to={node.fields.slug}>
                   {title}
                 </Link>
               </h3>
