@@ -2,7 +2,7 @@
 
 > A starter blog for TypeScript-based Gatsby projects with minimal settings.
 
-![demo-image](https://www.dropbox.com/s/2xs5msgv5uzk2d2/gatsy-typescript-starter-blog-image.png?dl=1)
+![demo-image](https://user-images.githubusercontent.com/45202363/50053530-e8357980-0179-11e9-8fdd-2ff069038ad2.png)
 
 ## Features
 
