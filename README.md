@@ -1,17 +1,18 @@
 # gatsby-typescript-starter-blog
 
-> A starter blog for TypeScript-based Gatsby projects with minimal default settings.
+> A starter blog for TypeScript-based Gatsby projects with minimal settings.
+
+![demo-image](https://www.dropbox.com/s/2xs5msgv5uzk2d2/gatsy-typescript-starter-blog-image.png?dl=0)
 
 ## Features
 
 - TypeScript & TSLint
-- Markdown rendering with Remark
-- No Styling
+- Minimal settings (No Styling)
 
 ## Geting started
 
 ```bash
-gatsby new project-name https://github.com/frnki/gatsby-typescript-starter-blog
+gatsby new [project-name] https://github.com/frnki/gatsby-typescript-starter-blog
 ```
 
 ## Development
