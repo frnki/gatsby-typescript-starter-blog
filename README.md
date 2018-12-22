@@ -18,9 +18,6 @@ gatsby new [project-name] https://github.com/frnki/gatsby-typescript-starter-blo
 ## Development
 
 ```bash
-# install
-npm install
-
 # develop 
 npm start
 
