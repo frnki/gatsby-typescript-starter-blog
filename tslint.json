@@ -10,7 +10,7 @@
     "no-console": [false],
     "no-var-requires": true,
     "jsx-no-lambda": false,
-    "quotemark": [true, "double", "jsx-double"]
+    "quotemark": [true, "single", "jsx-double"]
   },
   "rulesDirectory": []
 }

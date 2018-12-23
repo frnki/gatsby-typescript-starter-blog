@@ -1,6 +1,6 @@
-import { graphql, StaticQuery } from "gatsby"
-import * as React from "react"
-import Helmet from "react-helmet"
+import { graphql, StaticQuery } from 'gatsby'
+import * as React from 'react'
+import Helmet from 'react-helmet'
 
 interface SEOProps {
   description?: string
@@ -31,42 +31,42 @@ const SEO: React.SFC<SEOProps> = ({
           meta={[
             {
               content: metaDescription,
-              name: "description",
+              name: 'description',
             },
             {
               content: title,
-              property: "og:title",
+              property: 'og:title',
             },
             {
               content: metaDescription,
-              property: "og:description",
+              property: 'og:description',
             },
             {
-              content: "website",
-              property: "og:type",
+              content: 'website',
+              property: 'og:type',
             },
             {
-              content: "summary",
-              name: "twitter:card",
+              content: 'summary',
+              name: 'twitter:card',
             },
             {
               content: data.site.siteMetadata.author,
-              name: "twitter:creator",
+              name: 'twitter:creator',
             },
             {
               content: title,
-              name: "twitter:title",
+              name: 'twitter:title',
             },
             {
               content: metaDescription,
-              name: "twitter:description",
+              name: 'twitter:description',
             },
           ]
             .concat(
               keywords.length > 0
                 ? {
-                    content: keywords.join(", "),
-                    name: "keywords",
+                    content: keywords.join(', '),
+                    name: 'keywords',
                   }
                 : []
             )
@@ -79,7 +79,7 @@ const SEO: React.SFC<SEOProps> = ({
 
 SEO.defaultProps = {
   keywords: [],
-  lang: "en",
+  lang: 'en',
   meta: [],
 }
 

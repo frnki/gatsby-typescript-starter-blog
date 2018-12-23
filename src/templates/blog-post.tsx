@@ -1,7 +1,7 @@
-import { graphql, Link } from "gatsby"
-import * as React from "react"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import { graphql, Link } from 'gatsby'
+import * as React from 'react'
+import Layout from '../components/layout'
+import SEO from '../components/seo'
 
 interface BlogPostTemplateProps {
   data: {
@@ -37,9 +37,9 @@ class BlogPostTemplate extends React.Component<BlogPostTemplateProps, {}> {
         <h1>{post.frontmatter.title}</h1>
         <p
           style={{
-            display: "block",
-            marginBottom: "1rem",
-            marginTop: "-rem",
+            display: 'block',
+            marginBottom: '1rem',
+            marginTop: '-rem',
           }}
         >
           {post.frontmatter.date}
@@ -47,15 +47,15 @@ class BlogPostTemplate extends React.Component<BlogPostTemplateProps, {}> {
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
           style={{
-            marginBottom: "14px",
+            marginBottom: '14px',
           }}
         />
         <ul
           style={{
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "space-between",
-            listStyle: "none",
+            display: 'flex',
+            flexWrap: 'wrap',
+            justifyContent: 'space-between',
+            listStyle: 'none',
             padding: 0,
           }}
         >

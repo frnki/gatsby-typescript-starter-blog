@@ -1,8 +1,8 @@
-import { graphql, Link } from "gatsby"
-import * as React from "react"
-import Image from "../components/image"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import { graphql, Link } from 'gatsby'
+import * as React from 'react'
+import Image from '../components/image'
+import Layout from '../components/layout'
+import SEO from '../components/seo'
 
 interface PostNode {
   node: {
@@ -39,9 +39,9 @@ class IndexPage extends React.Component<IndexPageProps, {}> {
       <Layout>
         <SEO
           title="All posts"
-          keywords={["blog", "gatsby", "javascript", "react"]}
+          keywords={['blog', 'gatsby', 'javascript', 'react']}
         />
-        <div style={{ maxWidth: "300px", marginBottom: "1.45rem" }}>
+        <div style={{ maxWidth: '300px', marginBottom: '1.45rem' }}>
           <Image />
         </div>
         {posts.map(({ node }) => {
@@ -50,10 +50,10 @@ class IndexPage extends React.Component<IndexPageProps, {}> {
             <div key={node.fields.slug}>
               <h3
                 style={{
-                  marginBottom: "0.25rem",
+                  marginBottom: '0.25rem',
                 }}
               >
-                <Link style={{ boxShadow: "none" }} to={node.fields.slug}>
+                <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
                   {title}
                 </Link>
               </h3>
